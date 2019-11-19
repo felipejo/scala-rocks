@@ -20,7 +20,7 @@ abstract class MyList[+A]{
 
 }
 
-object Empty extends MyList[Nothing]{
+case object Empty extends MyList[Nothing]{
 
   def head: Nothing = throw new NoSuchElementException
   def tail: Nothing = throw new NoSuchElementException
@@ -37,7 +37,7 @@ object Empty extends MyList[Nothing]{
 
 }
 
-class Cons[+A](h: A, t: MyList[A]) extends MyList[A]{
+case class Cons[+A](h: A, t: MyList[A]) extends MyList[A]{
 
   def head: A = h
   def tail: MyList[A] = t
