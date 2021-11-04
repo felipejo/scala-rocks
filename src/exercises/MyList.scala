@@ -1,6 +1,7 @@
 package exercises
 
 import java.util.NoSuchElementException
+import scala.language.postfixOps
 
 abstract class MyList[+A]{
 
